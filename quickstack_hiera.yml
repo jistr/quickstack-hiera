@@ -1,6 +1,6 @@
 - hosts: controllers
   roles:
-    # - prerequisites
+    - prerequisites
     - opm
     - quickstack
     - hiera_params

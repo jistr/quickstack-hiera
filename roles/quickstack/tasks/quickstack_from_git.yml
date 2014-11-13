@@ -3,7 +3,7 @@
     quickstack_path: /usr/share/openstack-foreman-installer-git
 
 - set_fact:
-    quickstack_modules_path: "{{ quickstack_path }}/modules"
+    quickstack_modules_path: "{{ quickstack_path }}/puppet/modules"
 
 - name: clone quickstack repo
   git:

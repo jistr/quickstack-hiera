@@ -1,0 +1,19 @@
+---
+- name: copy quickstack hiera files
+  shell: cp {{ quickstack_modules_path }}/quickstack/data/* /var/lib/hiera
+
+- name: hiera config
+  template:
+    src=hiera.yaml.j2
+    dest=/etc/hiera.yaml
+
+- name: puppet hiera config link
+  file:
+    path=/etc/puppet/hiera.yaml
+    src=/etc/hiera.yaml
+    state=link
+
+- name: upload hiera files
+  copy:
+    src=hiera/
+    dest=/var/lib/hiera

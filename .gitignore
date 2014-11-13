@@ -1,1 +1,4 @@
+/hiera/*
+!/hiera/.gitkeep
+
 /inventory
