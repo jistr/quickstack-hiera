@@ -1,0 +1,4 @@
+---
+opm_source: git
+opm_git_repo: https://github.com/redhat-openstack/openstack-puppet-modules
+opm_git_ref: icehouse

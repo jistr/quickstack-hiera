@@ -1,0 +1,4 @@
+---
+quickstack_source: git
+quickstack_git_repo: https://github.com/redhat-openstack/astapor
+quickstack_git_ref: master

@@ -1,0 +1,15 @@
+- hosts: controllers
+  roles:
+    # - prerequisites
+    - opm
+    - quickstack
+    - hiera_params
+    - controller
+
+- hosts: computes
+  roles:
+    - prerequisites
+    - opm
+    - quickstack
+    - hiera_params
+    - compute

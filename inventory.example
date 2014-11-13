@@ -1,0 +1,8 @@
+[controllers]
+controller1.quickstack.local   ansible_ssh_user=root
+controller2.quickstack.local   ansible_ssh_user=root
+controller3.quickstack.local   ansible_ssh_user=root
+
+[computes]
+compute1.quickstack.local   ansible_ssh_user=root
+compute2.quickstack.local   ansible_ssh_user=root

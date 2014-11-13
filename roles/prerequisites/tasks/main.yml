@@ -1,0 +1,10 @@
+---
+- name: install prerequisite packages
+  yum: name={{ item }} state=present
+  with_items:
+    - puppet
+    - git
+
+- name: verify that openstack packages are available
+  shell: /usr/bin/yum info openstack-keystone
+  changed_when: false

@@ -1,0 +1,17 @@
+---
+- set_fact:
+    quickstack_path: /usr/share/openstack-foreman-installer-git
+
+- set_fact:
+    quickstack_modules_path: "{{ quickstack_path }}/modules"
+
+- name: clone quickstack repo
+  git:
+    repo={{ quickstack_git_repo }}
+    dest={{ quickstack_path }}
+    recursive=no
+
+- name: switch quickstack to correct ref
+  shell: /usr/bin/git checkout -f {{ quickstack_git_ref }}
+  args:
+    chdir: "{{ quickstack_path }}"

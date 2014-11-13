@@ -1,0 +1,3 @@
+---
+- include: opm_from_git.yml
+  when: opm_source == "git"
