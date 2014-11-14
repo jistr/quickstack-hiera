@@ -1,3 +1,6 @@
 ---
 - include: quickstack_from_git.yml
   when: quickstack_source == "git"
+
+- include: quickstack_from_rpm.yml
+  when: opm_source == "rpm"

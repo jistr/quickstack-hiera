@@ -1,0 +1,9 @@
+---
+- set_fact:
+    quickstack_path: /usr/share/openstack-foreman-installer
+
+- set_fact:
+    quickstack_modules_path: "{{ quickstack_path }}/puppet/modules"
+
+- name: install Quickstack package
+  yum: name={{ quickstack_rpm_package }} state=present
