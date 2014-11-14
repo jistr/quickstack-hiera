@@ -1,5 +1,5 @@
 ---
 - name: run puppet with HA controller classes
-  shell: /usr/bin/puppet apply -v -d --modulepath={{ opm_path }}/:{{ quickstack_modules_path }}/ -e "hiera_include('HA_AIO_classes')" &> /tmp/last-puppet-run.log
+  shell: /usr/bin/puppet apply -v -d --modulepath={{ opm_path }}/:{{ quickstack_modules_path }}/ -e "hiera_include('HA_AIO_classes')" &> /tmp/puppet-apply.log
   async: 9200
   poll: 30
