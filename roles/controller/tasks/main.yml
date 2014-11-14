@@ -1,5 +1,5 @@
 ---
 - name: run puppet with HA controller classes
-  shell: /usr/bin/puppet apply -v -d --modulepath=/usr/share/openstack-puppet-modules-git/:/usr/share/openstack-foreman-installer-git/puppet/modules/ -e "hiera_include('HA_AIO_classes')" &> /tmp/last-puppet-run.log
+  shell: /usr/bin/puppet apply -v -d --modulepath={{ opm_path }}/:{{ quickstack_modules_path }}/ -e "hiera_include('HA_AIO_classes')" &> /tmp/last-puppet-run.log
   async: 9200
   poll: 30
