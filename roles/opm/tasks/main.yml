@@ -1,3 +1,6 @@
 ---
 - include: opm_from_git.yml
   when: opm_source == "git"
+
+- include: opm_from_rpm.yml
+  when: opm_source == "rpm"

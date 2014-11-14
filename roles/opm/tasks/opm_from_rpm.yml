@@ -1,0 +1,6 @@
+---
+- set_fact:
+    opm_path: /usr/share/openstack-puppet/modules
+
+- name: install OPM package
+  yum: name={{ opm_rpm_package }} state=present
