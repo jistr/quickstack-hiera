@@ -1,0 +1,12 @@
+---
+network_admin: '192.168.122'
+network_internal: '192.168.122'
+network_public: '192.168.122'
+private_iface: 'eth1'
+tunnel_iface: 'eth1'
+server1_name: 'r7-ofi1'
+server1_ip: "%{hiera('network_admin')}.15"
+server2_name: 'r7-ofi2'
+server2_ip: "%{hiera('network_admin')}.16"
+server3_name: 'r7-ofi3'
+server3_ip: "%{hiera('network_admin')}.17"
