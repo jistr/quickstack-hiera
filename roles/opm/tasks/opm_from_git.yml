@@ -12,8 +12,3 @@
   shell: /usr/bin/git checkout -f {{ opm_git_ref }}
   args:
     chdir: "{{ opm_path }}"
-
-- name: update submodules if necessary
-  shell: /usr/bin/git submodule update --init
-  args:
-    chdir: "{{ opm_path }}"
