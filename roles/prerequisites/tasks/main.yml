@@ -1,4 +1,7 @@
 ---
+- include: repo.yml
+  when: openstack_repo
+
 - name: install prerequisite packages
   yum: name={{ item }} state=present
   with_items:
